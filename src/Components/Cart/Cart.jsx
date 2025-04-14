@@ -1,16 +1,25 @@
+import PropTypes from 'prop-types'; // ES6
 import './Cart.css'
 
-const Cart = ({cart}) => {
+const Cart = ({cart, handleRemoveFromCart}) => {
  console.log(cart);
  
   return (
     <div>
      <h4>  Cart : {cart.length}</h4>
      <div className="cart-container">
-         {cart.map(bottle=> <img src={bottle.img} alt="" /> )}
+         {cart.map(bottle=> <div>
+          <img src={bottle.img} alt="" />
+          <button onClick={()=>handleRemoveFromCart(bottle.id)}>remove</button>
+         </div> )}
      </div>
     </div>
   )
+}
+
+Cart.propTypes ={
+    cart : PropTypes.array.isRequired,
+    handleRemoveFromCart: PropTypes.func.isRequired
 }
 
 export default Cart
