@@ -48,7 +48,7 @@ const Bottles = () => {
    <div>
     <h2>Bottles Available: {bottles.length} </h2>
      <Cart cart={cart} />
-    <div className='Bottles-container'>
+    <div className='bottles-container'>
      {
       bottles.map(bottle => <Bottle
        key={bottle.id}

@@ -1,5 +1,7 @@
-.cart-container{
-   width: 50px;
-   height: 50px;
-  
+.cart-container {
+   display: flex;
+   gap: 20px;
+}
+.cart-container img{
+   width: 100px;
 }
