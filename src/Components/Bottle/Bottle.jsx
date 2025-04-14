@@ -2,6 +2,8 @@ import './Bottle.css'
 
 const Bottle = ({ bottle,  handleAddToCart }) => {
  const { name, img, price } = bottle;
+ 
+ 
 
  return (
   <div className="bottle">
@@ -11,7 +13,7 @@ const Bottle = ({ bottle,  handleAddToCart }) => {
      src={img} alt=""  />
    </div>
    <p>Price: {price} </p>
-   <button onClick={ handleAddToCart}>Purchase</button>
+   <button onClick={()=>handleAddToCart(bottle)}>Purchase</button>
   </div>
  )
 }
